@@ -1,18 +1,32 @@
 {
-  "name": "server",
+  "name": "mern-boilerplate",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A MERN (MongoDB, Express, React, Node) boilerplate with a Vite client and an Express API, managed as npm workspaces.",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev -w server\" \"npm run dev -w client\"",
+    "dev:server": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server"
   },
-  "keywords": [],
+  "keywords": [
+    "mern",
+    "mongodb",
+    "express",
+    "react",
+    "node",
+    "vite",
+    "boilerplate",
+    "workspaces"
+  ],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "nodemon": "^3.1.9"
+  "devDependencies": {
+    "concurrently": "^10.0.5"
   }
 }
