@@ -97,3 +97,9 @@ package into one: `npm install axios -w client`.
 
 - `node_modules` and `.env` files are git-ignored. Only `.env.example` files are committed.
 - The Vite dev server proxies `/api` to the Express server, so no CORS config or hardcoded backend URL is needed in development. For production, set `VITE_API_URL` in `client/.env`.
+
+## Author
+
+Built and maintained by [Hasnat Ahmad](https://www.devhasnatahmad.com/). Need help with a project? [Get in touch](https://www.devhasnatahmad.com/contact).
+
+If this project saved you time, please give it a ⭐ on GitHub.
